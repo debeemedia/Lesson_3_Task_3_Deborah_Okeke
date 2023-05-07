@@ -187,7 +187,6 @@ footer {
 	padding: 15px;
 	text-align: center;
 	width: 100%;
-	height: 25%;
 }
 
 footer .footer-top {
@@ -202,6 +201,12 @@ footer .footer-bottom {
 
 /**** For LARGE DEVICES ****/
 @media screen and (min-width: 768px) {
+	body {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+	
 	nav ul li a {
 		margin: 50px;
 		font-size: 1em;
@@ -211,7 +216,6 @@ footer .footer-bottom {
 	main {
 		flex-direction: row;
 		padding: 0 30px;
-		margin-bottom: 200px;
 	}
 
 	main section {
@@ -225,8 +229,6 @@ footer .footer-bottom {
 	}
 
 	footer {
-		position: fixed;
-		bottom: 0;
-		height: 200px;
+		margin-top: auto;
 	}
 }
