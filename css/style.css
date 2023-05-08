@@ -25,6 +25,10 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	
+	/* Had to put the following body styles here because of the lint */
+	background-color: #CCC;
+	font-family: Raleway, sans-serif;
 }
 
 ol, ul {
@@ -50,3 +54,181 @@ table {
 
 
 /* Write your css below here */
+
+/**** Designing for MOBILE FIRST ****/
+* {
+	box-sizing: border-box;
+	line-height: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-transform: uppercase;
+}
+
+header {
+	background-color: #373737;
+	color: #8A7219;
+	text-align: center;
+	padding: 8px;
+	margin-bottom: 0;
+	font-size: 1.3em;
+}
+
+nav {
+	background-image: linear-gradient(to bottom right, #b1942b, #8A7219);
+	margin-top: 0;
+}
+
+nav ul {
+	display: flex;
+	justify-content: center;
+}
+
+footer a {
+	text-decoration: none;
+	color: #b1942b;
+	opacity: 0.7;
+}
+
+main aside span a {
+	text-decoration: none;
+	color: #373737;
+	margin: 0 0 10px;
+	display: inline-block;
+	opacity: 0.7;
+	letter-spacing: 2px;
+	font-style: italic;
+}
+
+nav ul li a {
+	padding: 5px;
+	margin: 5px;
+	height: 20px;
+	text-align: center;
+	color: #373737;
+	text-decoration: none;
+	font-size: 0.8em;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	opacity: 1;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+	background-color: #CCC;
+}
+
+main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main section {
+	width: 100%;
+	color: #8A7219;
+	padding: 20px;
+	background-color: #CCC;
+}
+
+main section p {
+	color: #373737;
+	margin-bottom: 10px;
+	text-align: justify;
+}
+
+main section a.button {
+	display: inline-block;
+	background-image: linear-gradient(to bottom right, #b1942b, #8A7219);
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: #373737;
+	border: none;
+	outline: none;
+	width: 120px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px 8px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+main section a.button:hover {
+	box-shadow: 1px 1px 3px #866d14;
+	background-image: linear-gradient(to bottom right, #8A7219, #b1942b);
+	color: black;
+}
+
+main aside {
+	width: 100%;
+	background-color: #8A7219;
+	background-image: linear-gradient(to bottom right, #b1942b, #8A7219);
+	padding: 20px;
+	font-family: Lato, sans-serif;
+}
+
+main aside span a:hover {
+	opacity: 1;
+}
+
+main aside span a:focus {
+	border: 1px solid #CCC;
+}
+
+footer {
+	background-color: #373737;
+	color: #b1942b;
+	padding: 15px;
+	text-align: center;
+	width: 100%;
+}
+
+footer .footer-top {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+footer .footer-bottom {
+	margin-top: 15px;
+}
+
+/**** For LARGE DEVICES ****/
+@media screen and (width >= 768px) {
+	body {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	nav ul li a {
+		margin: 50px;
+		font-size: 1em;
+		padding: 2px 5px 5px;
+	}
+
+	main {
+		flex-direction: row;
+		padding: 0 30px;
+	}
+
+	main section {
+		width: 80%;
+		margin-right: 20px;
+	}
+
+	main aside {
+		width: 20%;
+		margin: 50px;
+	}
+
+	footer {
+		margin-top: auto;
+	}
+}
