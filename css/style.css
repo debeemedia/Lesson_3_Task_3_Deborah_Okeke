@@ -200,7 +200,7 @@ footer .footer-bottom {
 }
 
 /**** For LARGE DEVICES ****/
-@media screen and (min-width: 768px) {
+@media screen and (width >= 768px) {
 	body {
 		min-height: 100vh;
 		display: flex;
